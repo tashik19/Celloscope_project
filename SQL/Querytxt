@@ -1,0 +1,9 @@
+SELECT id, "name", phone FROM customers order by "name" desc
+
+
+
+INSERT INTO purchase_history (id, product_name, unit_price, quantity, total_price, customer_id)
+VALUES('1234', 'ABC', 234, 2, 468, '62731ac1-1931-4bae-bfd2-24cdad32fdec')
+
+
+select * from customers c left join purchase_history ph  on c.id = ph.customer_id  where c.id ='62731ac1-1931-4bae-bfd2-24cdad32fdec'
